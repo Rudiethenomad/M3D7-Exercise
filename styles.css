@@ -1,14 +1,15 @@
 body{
-     height: 90vh;
+    margin: 0;
 }
 main{
-    height: 90vh;
+    height: 85vh;
     display:flex;
     justify-content: center;
-    padding-top: 50px;
+   padding-top: 100px;
    margin-left: 500px;
    margin-right: 500px;
-   margin-bottom: 200px;
+   margin-bottom: 50px;
+   margin-top: 20px;
   
     background-color: blue;
 
@@ -16,43 +17,52 @@ main{
 
 .ball {
    
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    margin-bottom: 2rem;
+
+   
 }
 
 .bouncing-ball{
     background-color: red;
-            animation: jump 2s infinite, bgChange 2s infinite;
+     animation: squashstretch .5s ease-in-out .2s infinite alternate;
+     animation: squashstretch .5s ease-in-out .2s infinite alternate;
+ 
 
 
 
-
-            
+           
 }
 
-@keyframes bgChange {
-    100% {
-        background-color: red;
-    }
 
-    60% {
-        background-color: red;
-    }
+
+@keyframes squashstretch {
+	0% {
+		transform: translateY(-100px);
+		        transform: translateY(-100px); 
+	}
+	
+	10% { 
+		width: 50px;
+		height: 50px;
+        border-radius: 50px;
+      
+	}
+	
+	100% { 
+		width: 75px;
+		height: 50px;
+		border-bottom-left-radius: 60px;
+		border-bottom-right-radius: 60px;
+        border-top-left-radius: 60px;
+		border-top-right-radius: 60px;
+		transform: translateY(65vh);
+		        transform: translateY(65vh);
+               box-shadow: 10px 20px 30px black;
+	}
 }
 
-@keyframes jump {
-    25% {
-        transform: translateY(60vh);
-    }
 
-    100% {
-        transform: none;
-    }
-}
 
-@keyframes forwards {
-    from { transform: translateX(100px);}
-    to { transform: translateX(100px); }
-}
+
