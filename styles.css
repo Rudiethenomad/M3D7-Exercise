@@ -49,7 +49,7 @@ main{
         border-radius: 50px;
       
 	}
-	
+	/*The squash and shadow still aren't completly correct but I am out of time*/
 	100% { 
 		width: 75px;
 		height: 50px;
